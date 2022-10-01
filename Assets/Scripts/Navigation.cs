@@ -1,69 +1,52 @@
+using System.Collections;
 using UnityEngine;
+
 // ReSharper disable CompareOfFloatsByEqualityOperator
 
 public class Navigation : MonoBehaviour
 {
-    private bool _facingDown;
-    private bool _facingUp;
-    private bool _canSide = true;
-
+    [SerializeField] private float rotationseconds = 0.5f;
+    private bool _isRotating;
     void Update()
     {
         //rotate the object depending on the keys pressed
-        if(Input.anyKeyDown)
+        if (Input.anyKeyDown)
         {
             Turn();
         }
-
-        
     }
-
-    private void UpAndDownCheck()
-    {
-        if (transform.eulerAngles.x == 0)
-        {
-            _facingUp = false;
-            _facingDown = false;
-            _canSide = true;
-            
-        }
-        if(transform.eulerAngles.x == 270)
-        {
-            _facingUp = true;
-            _facingDown = false;
-            _canSide = false;
-        }
-        if (transform.eulerAngles.x == 90)
-        {
-            _facingUp = false;
-            _facingDown = true;
-            _canSide = false;
-        }
-    }
-
     private void Turn()
     {
-        if (Input.GetKeyDown(KeyCode.A) && _canSide)
+        if (Input.GetKeyDown(KeyCode.A) && !_isRotating)
         {
-            transform.Rotate(0, -90, 0);
+            var eulerAngles = transform.eulerAngles;
+            Quaternion desiredRotQ = Quaternion.Euler(eulerAngles.x, eulerAngles.y - 90, eulerAngles.z);
+            StartCoroutine(SmoothRotate(desiredRotQ));
         }
 
-        if (Input.GetKeyDown(KeyCode.D) && _canSide)
+        if (Input.GetKeyDown(KeyCode.D) && !_isRotating)
         {
-            transform.Rotate(0, 90, 0);
+            var eulerAngles = transform.eulerAngles;
+            Quaternion desiredRotQ = Quaternion.Euler(eulerAngles.x, eulerAngles.y + 90, eulerAngles.z);
+            StartCoroutine(SmoothRotate(desiredRotQ));
         }
+    }
 
-        if (Input.GetKeyDown(KeyCode.W) && _facingUp == false)
+    IEnumerator SmoothRotate(Quaternion desiredRotQ)
+    { 
+        
+        if (!_isRotating)
         {
-            transform.Rotate(-90, 0, 0);
-            UpAndDownCheck();
-
+            _isRotating = true;
+            float currentRotatonSecs = 0;
+            while (currentRotatonSecs < rotationseconds)
+            {
+                currentRotatonSecs += Time.deltaTime;
+                transform.rotation = Quaternion.Lerp(transform.rotation, desiredRotQ, Mathf.Clamp(currentRotatonSecs / rotationseconds,0f,1f));
+                yield return null;
+            }
+            _isRotating = false;
         }
-
-        if (Input.GetKeyDown(KeyCode.S) && _facingDown == false)
-        {
-            transform.Rotate(90, 0, 0);
-            UpAndDownCheck();
-        }
+        
     }
 }
