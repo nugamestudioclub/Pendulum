@@ -10,7 +10,9 @@ public abstract class ToggleProp : Prop
     protected abstract int NumStates { get; }
     protected void Toggle()
     {
-        EnterState(++state % NumStates);
+        state++; 
+        state %= NumStates;
+        EnterState(state);
     }
 
     protected abstract void EnterState(int stateNum);
