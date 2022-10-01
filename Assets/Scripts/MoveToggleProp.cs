@@ -6,13 +6,12 @@ public class MoveToggleProp : ToggleProp
     [SerializeField]
     private List<Transform> stateLocations;
 
-    protected override int NumStates { 
-        get => stateLocations.Count;
-    }
+    protected override int NumStates => stateLocations.Count;
 
     protected override void EnterState(int stateNum)
-    { 
-        transform.position = stateLocations[stateNum].position;
-        transform.rotation = stateLocations[stateNum].rotation;
+    {
+        var transform1 = transform;
+        transform1.position = stateLocations[stateNum].position;
+        transform1.rotation = stateLocations[stateNum].rotation;
     }
 }

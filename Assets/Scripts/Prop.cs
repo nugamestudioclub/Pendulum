@@ -8,6 +8,7 @@ public abstract class Prop : MonoBehaviour
     private void OnMouseDown()
     {
         Debug.Log($"{name} was clicked");
+        
         Activate();
     }
    
