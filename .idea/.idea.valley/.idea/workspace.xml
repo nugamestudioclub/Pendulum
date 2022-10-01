@@ -2,10 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1ba5b4dd-83bb-4f73-ab21-b23a0b78168c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.valley/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.valley/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets - Copy/Prefabs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets - Copy/Scenes.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets - Copy/Scenes/Main.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets - Copy/Scenes/Main.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets - Copy/Scripts.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets - Copy/Sounds.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets - Copy/Sprites.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Navigation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Navigation.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/InputManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/InputManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +79,8 @@
       <option name="presentableId" value="Default" />
       <updated>1664590157514</updated>
       <workItem from="1664590180266" duration="950000" />
-      <workItem from="1664591536036" duration="3866000" />
+      <workItem from="1664591536036" duration="4511000" />
+      <workItem from="1664642651943" duration="1251000" />
     </task>
     <servers />
   </component>
