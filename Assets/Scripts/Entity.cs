@@ -52,6 +52,14 @@ public class Entity : MonoBehaviour {
 	[field: SerializeField]
 	public UnityEvent<Entity> OnInteract { get; private set; }
 
+	// This will fire whenever game time is frozen
+	[field: SerializeField]
+	public UnityEvent<Entity> OnFreeze { get; private set; }
+
+	// This will fire whenever game time continues from being frozen
+	[field: SerializeField]
+	public UnityEvent<Entity> OnUnfreeze { get; private set; }
+
 	void Start() {
 		GameManager.Bind(this);
 	}
