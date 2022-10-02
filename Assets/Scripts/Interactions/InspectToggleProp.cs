@@ -33,7 +33,6 @@ public class InspectToggleProp : ToggleProp
 
     IEnumerator PlaceBackObject()
     {
-        // smooth move the object 1 units infront of the camera
         float time = 0f;
 
         Vector3 startPos = transform.position;
