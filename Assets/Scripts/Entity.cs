@@ -17,6 +17,7 @@ public class Entity : MonoBehaviour {
 		}
 	}
 
+	[SerializeField]
 	GameObject[] views;
 
 	[CallAccessors(nameof(ViewSelection))]
@@ -62,6 +63,21 @@ public class Entity : MonoBehaviour {
 
 	void Start() {
 		GameManager.Bind(this);
+	}
+
+
+	public void ViewNext() {
+		++ViewSelection;
+	}
+
+	public void ViewRandom() {
+		int selection = GameManager.Random.Next(ViewCount - 1);
+
+		ViewSelection = selection < ViewSelection ? selection : selection + 1;
+	}
+
+	public void ViewByEpoch() {
+		ViewSelection = (int)(ViewCount * ((float)GameManager.Epoch / GameManager.EpochCount));
 	}
 
 	private void ClearViews() {

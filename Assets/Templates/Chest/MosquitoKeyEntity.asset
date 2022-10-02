@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65590899c23805949a745ce450a7b312, type: 3}
+  m_Name: MosquitoKeyEntity
+  m_EditorClassIdentifier: 
+  views:
+  - {fileID: 389584717639561356, guid: edd736848f7a73b4eb1117da2cfe3c34, type: 3}
+  - {fileID: 8617107396315742105, guid: a723a8aba384e624ba610f560caf3676, type: 3}
