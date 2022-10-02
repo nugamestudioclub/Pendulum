@@ -29,6 +29,10 @@ public class GameManager : MonoBehaviour {
 
 	private int epoch;
 
+	public static int Epoch => instance.epoch;
+
+	public static readonly int EpochCount = 5;
+
 	private void Update() {
 		tickTime += Time.deltaTime;
 		if( tickTime > tickLength ) {
@@ -59,6 +63,6 @@ public class GameManager : MonoBehaviour {
 	private void AdvanceEpoch() {
 		++epoch;
 		foreach( var entity in GetEntities() )
-			entity.OnEpoch.Invoke(entity, epoch);
+			entity.OnEpoch.Invoke(entity);
 	}
 }

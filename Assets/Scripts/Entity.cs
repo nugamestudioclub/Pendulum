@@ -46,7 +46,7 @@ public class Entity : MonoBehaviour {
 
 	// This will fire whenever enough time passes for the game to enter a new epoch
 	[field: SerializeField]
-	public UnityEvent<Entity, int> OnEpoch { get; private set; }
+	public UnityEvent<Entity> OnEpoch { get; private set; }
 
 	// This will fire whenever the player interacts with entity
 	[field: SerializeField]

@@ -5,13 +5,17 @@ using Utils;
 public class ViewEntityBehaviors : ScriptableObject {
 	private static readonly System.Random random = new();
 
-	public void NextView(Entity entity) {
+	public void ViewNext(Entity entity) {
 		++entity.ViewSelection;
 	}
 
-	public void RandomView(Entity entity) {
+	public void ViewRandom(Entity entity) {
 		int selection = random.Next(entity.ViewCount - 1);
 
 		entity.ViewSelection = selection < entity.ViewSelection ? selection : selection + 1;
+	}
+
+	public void ViewByEpoch(Entity entity) {
+		entity.ViewSelection = (int)(entity.ViewCount * ((float)GameManager.Epoch / GameManager.EpochCount));
 	}
 }
