@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour {
 
 	public static readonly System.Random Random = new();
 
-	private bool isTimeFrozen;
+	public bool isTimeFrozen;
 	public static bool IsTimeFrozen => instance.isTimeFrozen;
 
 	private readonly List<Entity> entities = new();
