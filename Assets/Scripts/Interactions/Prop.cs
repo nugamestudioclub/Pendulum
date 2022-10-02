@@ -1,15 +1,16 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public abstract class Prop : MonoBehaviour
 {
+    [SerializeField] private GameObject menuHandler;
     protected abstract void Activate();
     private void OnMouseDown()
     {
         Debug.Log($"{name} was clicked");
-        
-        Activate();
+        if(menuHandler.GetComponent<InGameMenu>().gameisPaused == false)
+        {
+            Activate();
+        }
     }
    
 }
