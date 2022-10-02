@@ -5,6 +5,8 @@ using UnityEngine;
 public class GameManager : MonoBehaviour {
 	private static GameManager instance;
 
+	public static readonly System.Random Random = new();
+
 	void Awake() {
 		if( instance == null ) {
 			instance = this;
@@ -35,13 +37,13 @@ public class GameManager : MonoBehaviour {
 
 	private void Update() {
 		tickTime += Time.deltaTime;
-		if( tickTime > tickLength ) {
+		if( tickTime >= tickLength ) {
 			Tick();
 			tickTime = 0.0f;
 		}
 
 		epochTime += Time.deltaTime;
-		if( epochTime > epochLength ) {
+		if( epochTime >= epochLength ) {
 			AdvanceEpoch();
 			epochTime = 0.0f;
 		}
@@ -56,8 +58,10 @@ public class GameManager : MonoBehaviour {
 	}
 
 	private void Tick() {
-		foreach( var entity in GetEntities() )
-			entity.OnTick.Invoke(entity);
+		var entities = GetEntities().ToList();
+		var pick = entities[Random.Next(entities.Count)];
+		
+		pick.OnTick.Invoke(pick);
 	}
 
 	private void AdvanceEpoch() {
