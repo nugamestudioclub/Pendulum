@@ -9,12 +9,14 @@ using UnityEditor;
 namespace Utils {
 	[AttributeUsage(AttributeTargets.Field)]
 	public class CallAccessorsAttribute : PropertyAttribute {
+#if UNITY_EDITOR
 		private readonly string name;
 		public string Name => name;
 
 		public CallAccessorsAttribute(string name) {
 			this.name = name;
 		}
+#endif
 	}
 
 #if UNITY_EDITOR

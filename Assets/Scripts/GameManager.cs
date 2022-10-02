@@ -7,9 +7,6 @@ public class GameManager : MonoBehaviour {
 
 	public static readonly System.Random Random = new();
 
-	private bool isTimeFrozen;
-	public static bool IsTimeFrozen => instance.isTimeFrozen;
-
 	void Awake() {
 		if( instance == null ) {
 			instance = this;
@@ -22,8 +19,6 @@ public class GameManager : MonoBehaviour {
 
 	private readonly List<Entity> entities = new();
 
-	public float TimeElapsed { get; private set; }
-
 	private float tickTime;
 
 	[SerializeField]
@@ -32,7 +27,7 @@ public class GameManager : MonoBehaviour {
 	private float epochTime;
 
 	[SerializeField]
-	private float epochLength = 120.0f;
+	private float epochLength = 60.0f;
 
 	private int epoch;
 
@@ -41,24 +36,25 @@ public class GameManager : MonoBehaviour {
 	public static readonly int EpochCount = 5;
 
 	private void Update() {
-		if( !IsTimeFrozen )
-			AdvanceTime(Time.deltaTime);
+		tickTime += Time.deltaTime;
+		if( tickTime >= tickLength ) {
+			Tick();
+			tickTime = 0.0f;
+		}
+
+		epochTime += Time.deltaTime;
+		if( epochTime >= epochLength ) {
+			AdvanceEpoch();
+			epochTime = 0.0f;
+		}
+	}
+
+	private static IEnumerable<Entity> GetEntities() {
+		return instance.entities.Where(e => e != null && e.enabled);
 	}
 
 	public static void Bind(Entity entity) {
 		instance.entities.Add(entity);
-	}
-
-	public static void Freeze() {
-		instance.isTimeFrozen = true;
-		foreach( var entity in GetEntities() )
-			entity.OnFreeze.Invoke(entity);
-	}
-
-	public static void Unfreeze() {
-		instance.isTimeFrozen = false;
-		foreach( var entity in GetEntities() )
-			entity.OnUnfreeze.Invoke(entity);
 	}
 
 	private void Tick() {
@@ -68,29 +64,9 @@ public class GameManager : MonoBehaviour {
 		pick.OnTick.Invoke(pick);
 	}
 
-	private void AdvanceTime(float delta) {
-		TimeElapsed += delta;
-
-		tickTime += delta;
-		if( tickTime >= tickLength ) {
-			Tick();
-			tickTime = 0.0f;
-		}
-
-		epochTime += delta;
-		if( epochTime >= epochLength ) {
-			AdvanceEpoch();
-			epochTime = 0.0f;
-		}
-	}
-
 	private void AdvanceEpoch() {
 		++epoch;
 		foreach( var entity in GetEntities() )
 			entity.OnEpoch.Invoke(entity);
-	}
-
-	private static IEnumerable<Entity> GetEntities() {
-		return instance.entities.Where(e => e != null && e.enabled);
 	}
 }
