@@ -536,7 +536,6 @@ GameObject:
   m_Component:
   - component: {fileID: 283685536}
   - component: {fileID: 283685538}
-  - component: {fileID: 283685537}
   m_Layer: 0
   m_Name: 'Minute hand '
   m_TagString: Untagged
@@ -559,18 +558,6 @@ Transform:
   m_Father: {fileID: 2000799751}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 140.91}
---- !u!114 &283685537
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 283685535}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b011f99ac41bdef4fbe5163e82bef426, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &283685538
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -633,7 +620,6 @@ GameObject:
   m_Component:
   - component: {fileID: 385690135}
   - component: {fileID: 385690137}
-  - component: {fileID: 385690136}
   m_Layer: 0
   m_Name: 'Hour hand '
   m_TagString: Untagged
@@ -656,18 +642,6 @@ Transform:
   m_Father: {fileID: 2000799751}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 216.83}
---- !u!114 &385690136
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 385690134}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b011f99ac41bdef4fbe5163e82bef426, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &385690137
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -847,7 +821,7 @@ Camera:
   m_FOVAxisMode: 0
   m_SensorSize: {x: 70.41, y: 52.63}
   m_LensShift: {x: 0, y: 0}
-  m_FocalLength: 50
+  m_FocalLength: 42.94218
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -881,14 +855,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &519420033
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -912,7 +886,6 @@ GameObject:
   m_Component:
   - component: {fileID: 520037939}
   - component: {fileID: 520037941}
-  - component: {fileID: 520037940}
   m_Layer: 0
   m_Name: ClockDoorKnob
   m_TagString: Untagged
@@ -935,18 +908,6 @@ Transform:
   m_Father: {fileID: 1358451090}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 216.83}
---- !u!114 &520037940
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 520037938}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b011f99ac41bdef4fbe5163e82bef426, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &520037941
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1609,7 +1570,6 @@ GameObject:
   m_Component:
   - component: {fileID: 935120779}
   - component: {fileID: 935120781}
-  - component: {fileID: 935120780}
   m_Layer: 0
   m_Name: clock-center
   m_TagString: Untagged
@@ -1632,18 +1592,6 @@ Transform:
   m_Father: {fileID: 2000799751}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 216.83}
---- !u!114 &935120780
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 935120778}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b011f99ac41bdef4fbe5163e82bef426, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &935120781
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1790,7 +1738,6 @@ GameObject:
   m_Component:
   - component: {fileID: 948531974}
   - component: {fileID: 948531976}
-  - component: {fileID: 948531975}
   m_Layer: 0
   m_Name: 'Door Knob '
   m_TagString: Untagged
@@ -1813,18 +1760,6 @@ Transform:
   m_Father: {fileID: 1358451090}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 216.83}
---- !u!114 &948531975
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 948531973}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b011f99ac41bdef4fbe5163e82bef426, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &948531976
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1887,7 +1822,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1076701432}
   - component: {fileID: 1076701434}
-  - component: {fileID: 1076701433}
   m_Layer: 0
   m_Name: 'Painting '
   m_TagString: Untagged
@@ -1910,18 +1844,6 @@ Transform:
   m_Father: {fileID: 1358451090}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1076701433
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1076701431}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b011f99ac41bdef4fbe5163e82bef426, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &1076701434
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1984,7 +1906,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1182194905}
   - component: {fileID: 1182194904}
-  - component: {fileID: 1182194903}
   m_Layer: 0
   m_Name: 'Second hand '
   m_TagString: Untagged
@@ -1992,18 +1913,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1182194903
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1182194902}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b011f99ac41bdef4fbe5163e82bef426, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &1182194904
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2538,7 +2447,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1839034848}
   - component: {fileID: 1839034850}
-  - component: {fileID: 1839034849}
+  - component: {fileID: 1839034852}
+  - component: {fileID: 1839034851}
   m_Layer: 0
   m_Name: Pendulum
   m_TagString: Untagged
@@ -2553,26 +2463,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1839034847}
-  m_LocalRotation: {x: -0, y: -0, z: 0.94879335, w: -0.31589738}
+  m_LocalRotation: {x: 0.94879335, y: -0.31589738, z: 0, w: 0}
   m_LocalPosition: {x: -2.21, y: -0.15, z: 2.3151395}
   m_LocalScale: {x: 0.21000001, y: 0.21000001, z: 0}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1358451090}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 216.83}
---- !u!114 &1839034849
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1839034847}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b011f99ac41bdef4fbe5163e82bef426, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 216.83}
 --- !u!212 &1839034850
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2625,6 +2523,34 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1839034851
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1839034847}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48fb9293db081134fb4e765e21a105c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  state: 0
+  maxTime: 1
+  distanceFromObject: 1
+--- !u!135 &1839034852
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1839034847}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0.00000047683716, y: 0.00000047683716, z: 0}
 --- !u!1 &1899105888
 GameObject:
   m_ObjectHideFlags: 0
@@ -2838,7 +2764,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2138821497}
   - component: {fileID: 2138821499}
-  - component: {fileID: 2138821498}
   m_Layer: 0
   m_Name: Pendulum Rod
   m_TagString: Untagged
@@ -2861,18 +2786,6 @@ Transform:
   m_Father: {fileID: 1358451090}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0.781, y: -0.327, z: 14.747}
---- !u!114 &2138821498
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2138821496}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b011f99ac41bdef4fbe5163e82bef426, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &2138821499
 SpriteRenderer:
   m_ObjectHideFlags: 0
