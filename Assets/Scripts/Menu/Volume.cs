@@ -5,7 +5,7 @@ public class Volume : MonoBehaviour
 {
     [SerializeField] private Slider mainSlider;
 
-    public void Start()
+    public void Awake()
     {
         //Adds a listener to the main slider and invokes a method when the value changes.
         mainSlider.onValueChanged.AddListener(delegate { VolumeChange(); });
