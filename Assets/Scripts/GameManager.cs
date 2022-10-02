@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using Utils;
 
 public class GameManager : MonoBehaviour {
 	private static GameManager instance;
@@ -9,16 +10,6 @@ public class GameManager : MonoBehaviour {
 
 	private bool isTimeFrozen;
 	public static bool IsTimeFrozen => instance.isTimeFrozen;
-
-	void Awake() {
-		if( instance == null ) {
-			instance = this;
-			DontDestroyOnLoad(gameObject);
-		}
-		else {
-			Destroy(gameObject);
-		}
-	}
 
 	private readonly List<Entity> entities = new();
 
@@ -40,6 +31,25 @@ public class GameManager : MonoBehaviour {
 
 	public static readonly int EpochCount = 5;
 
+	[SerializeField]
+	private int passwordLength = 4;
+
+	private string password;
+	public static string Password => instance.password;
+
+	void Awake() {
+		if( instance == null ) {
+			instance = this;
+			DontDestroyOnLoad(gameObject);
+		}
+		else {
+			Destroy(gameObject);
+		}
+		password = GetPassword(passwordLength);
+
+		Debug.Log(password);
+	}
+
 	private void Update() {
 		if( !IsTimeFrozen )
 			AdvanceTime(Time.deltaTime);
@@ -59,6 +69,14 @@ public class GameManager : MonoBehaviour {
 		instance.isTimeFrozen = false;
 		foreach( var entity in GetEntities() )
 			entity.OnUnfreeze.Invoke(entity);
+	}
+
+	private static string GetPassword(int length) {
+		char[] chars = Enumerable.Range(0, length).Select(i => (char)(i + '0')).ToArray();
+
+		Random.Shuffle(chars);
+
+		return new(chars);
 	}
 
 	private void Tick() {

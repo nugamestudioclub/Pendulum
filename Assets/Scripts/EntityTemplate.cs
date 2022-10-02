@@ -7,6 +7,4 @@ public class EntityTemplate : ScriptableObject {
 	[SerializeField]
 	GameObject[] views;
 	public GameObject[] Views => views;
-
-	public UnityEvent<GameObject> Foo;
 }

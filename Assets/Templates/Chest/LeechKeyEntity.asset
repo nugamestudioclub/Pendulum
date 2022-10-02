@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65590899c23805949a745ce450a7b312, type: 3}
+  m_Name: LeechKeyEntity
+  m_EditorClassIdentifier: 
+  views:
+  - {fileID: 1294176110917941274, guid: 2d03a529ec9d19749a34708372a0c17a, type: 3}
+  - {fileID: 4917819985431142919, guid: d44423363586e144cb7bd9248bd86cef, type: 3}
