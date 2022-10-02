@@ -10,7 +10,7 @@ public class GameManager : MonoBehaviour {
 
 	private bool isTimeFrozen;
 	public static bool IsTimeFrozen => instance.isTimeFrozen;
-
+  
 	private readonly List<Entity> entities = new();
 
 	public float TimeElapsed { get; private set; }
@@ -30,7 +30,7 @@ public class GameManager : MonoBehaviour {
 	public static int Epoch => instance.epoch;
 
 	public static readonly int EpochCount = 5;
-
+  
 	[SerializeField]
 	private int passwordLength = 4;
 
@@ -53,32 +53,32 @@ public class GameManager : MonoBehaviour {
 	private void Update() {
 		if( !IsTimeFrozen )
 			AdvanceTime(Time.deltaTime);
-	}
-
+  }
+  
 	public static void Bind(Entity entity) {
 		instance.entities.Add(entity);
 	}
-
+  
 	public static void Freeze() {
 		instance.isTimeFrozen = true;
 		foreach( var entity in GetEntities() )
 			entity.OnFreeze.Invoke(entity);
 	}
-
+  
 	public static void Unfreeze() {
 		instance.isTimeFrozen = false;
 		foreach( var entity in GetEntities() )
 			entity.OnUnfreeze.Invoke(entity);
 	}
-
+  
 	private static string GetPassword(int length) {
 		char[] chars = Enumerable.Range(0, length).Select(i => (char)(i + '0')).ToArray();
-
+  
 		Random.Shuffle(chars);
-
+  
 		return new(chars);
 	}
-
+  
 	private void Tick() {
 		var entities = GetEntities().ToList();
 		var pick = entities[Random.Next(entities.Count)];
