@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="1ba5b4dd-83bb-4f73-ab21-b23a0b78168c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.valley/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.valley/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Production/Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Production/Main.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interactions/Prop.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interactions/Prop.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Menu/InGameMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Menu/InGameMenu.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
