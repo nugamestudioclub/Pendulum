@@ -56,6 +56,9 @@ public class GameManager : MonoBehaviour {
 	[SerializeField]
 	public Sprite[] tallySprites;
 
+	private AudioSource audioSource;
+
+
 	[SerializeField]
 	private List<string> inventory = new();
 	void Awake() {
@@ -67,6 +70,10 @@ public class GameManager : MonoBehaviour {
 			Destroy(gameObject);
 		}
 		password = GetPassword(passwordLength);
+		
+		audioSource =  gameObject.GetComponent<AudioSource>();
+		if( audioSource == null )
+			audioSource = gameObject.AddComponent<AudioSource>();
 
 		Debug.Log("Keypad Password: " + password);
 		Debug.Log($"Win Combo: (s: {SecondWin}, m: {MinuteWin}, h: {HourWin}");
@@ -154,5 +161,8 @@ public class GameManager : MonoBehaviour {
 
 	public static bool HasItem(string item) {
 		return instance.inventory.Contains(item);
+	}
+	public static void PlayOneShot(AudioClip clip) {
+		instance.audioSource.PlayOneShot(clip);
 	}
 }

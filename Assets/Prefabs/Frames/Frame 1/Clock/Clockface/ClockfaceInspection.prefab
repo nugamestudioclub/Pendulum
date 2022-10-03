@@ -50,6 +50,7 @@ MonoBehaviour:
   secondHand: {fileID: 4647430608271419701}
   minuteHand: {fileID: 2962660829326558460}
   hourHand: {fileID: 8860844337459537378}
+  exitSound: {fileID: 8300000, guid: ea01b8c6634d9d542b46c3e8b9846d70, type: 3}
 --- !u!1 &3177332236292399202
 GameObject:
   m_ObjectHideFlags: 0
