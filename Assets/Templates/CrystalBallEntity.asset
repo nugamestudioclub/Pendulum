@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65590899c23805949a745ce450a7b312, type: 3}
   m_Name: CrystalBallEntity
   m_EditorClassIdentifier: 
-  views: []
+  views:
+  - {fileID: 473382392835074196, guid: 4fbd17b7390c91549aeabc563f639211, type: 3}
