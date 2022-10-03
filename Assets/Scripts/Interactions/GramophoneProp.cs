@@ -6,14 +6,14 @@ using UnityEngine;
 public class GramophoneProp : ToggleProp
 {
     // change audio scource pitch increase from 0 to 1 every click
-    public AudioSource audioSource;
     public float pitchIncrease = 0.2f;
     public Sprite[] spriteArray;
     public SpriteRenderer spriteRenderer;
     protected override int NumStates => 6;
 
-    private void Awake()
+    protected override void DoAwake()
     {
+        base.DoAwake();
         audioSource.pitch = 0f;
     }
 

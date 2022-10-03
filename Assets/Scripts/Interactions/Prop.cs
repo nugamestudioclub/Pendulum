@@ -4,7 +4,7 @@ using System.Collections;
 public abstract class Prop : MonoBehaviour {
 	public AudioClip sound;
 
-	private AudioSource audioSource;
+	protected AudioSource audioSource;
 
 	void Awake() {
 		DoAwake();
