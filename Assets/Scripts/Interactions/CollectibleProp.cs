@@ -9,6 +9,7 @@ public class CollectibleProp : Prop {
 
 	protected override void Activate() {
 		GameManager.AddItem(item);
+		entity.EnableCollider(false);
 		entity.ShowView(false);
 	}
 }

@@ -1,22 +1,28 @@
 using UnityEngine;
 using System.Collections;
 
-public abstract class Prop : MonoBehaviour
-{
-    public AudioClip sound;
-    protected abstract void Activate();
+public abstract class Prop : MonoBehaviour {
+	public AudioClip sound;
 
-    private void OnMouseDown()
-    {
-        AudioSource audiosc = gameObject.GetComponent<AudioSource>();
-        Debug.Log($"{name} was clicked");
-        if (audiosc  == null)
-        {
-            audiosc = gameObject.AddComponent<AudioSource>();
-        }
-        
-        audiosc.clip = sound;
-        audiosc.Play();
-        Activate();
-    }
+	private AudioSource audioSource;
+
+	void Awake() {
+		audioSource =  gameObject.GetComponent<AudioSource>();
+		if( audioSource == null )
+			audioSource = gameObject.AddComponent<AudioSource>();
+	}
+
+	private void OnMouseDown() {
+		Debug.Log($"{name} was clicked");
+
+		if( sound != null )
+			PlaySound(sound);
+		Activate();
+	}
+
+	protected abstract void Activate();
+
+	protected void PlaySound(AudioClip audioClip) {
+		audioSource.PlayOneShot(audioClip);
+	}
 }
