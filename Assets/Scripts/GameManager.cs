@@ -13,12 +13,15 @@ public class GameManager : MonoBehaviour {
 
 	private readonly List<Entity> entities = new();
 
-	public float TimeElapsed { get; private set; }
+	private float timeElapsed;
+	public static float TimeElapsed  => instance.timeElapsed;
 
 	private float tickTime;
 
 	[SerializeField]
 	private float tickLength = 10.0f;
+
+	public static float TickLength => instance.tickLength;
 
 	private float epochTime;
 
@@ -95,7 +98,7 @@ public class GameManager : MonoBehaviour {
 	}
 
 	private void AdvanceTime(float delta) {
-		TimeElapsed += delta;
+		timeElapsed += delta;
 
 		tickTime += delta;
 		if( tickTime >= tickLength ) {
