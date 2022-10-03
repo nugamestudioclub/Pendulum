@@ -104,6 +104,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: Glass_Shard
       objectReference: {fileID: 0}
+    - target: {fileID: 7668457595092445032, guid: 19aae6ed9661fd646b3d5ec29e5210eb, type: 3}
+      propertyPath: <OnEpoch>k__BackingField.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7668457595092445032, guid: 19aae6ed9661fd646b3d5ec29e5210eb, type: 3}
+      propertyPath: <OnEpoch>k__BackingField.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7668457595092445032, guid: 19aae6ed9661fd646b3d5ec29e5210eb, type: 3}
+      propertyPath: <OnEpoch>k__BackingField.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 5863892298760168045}
+    - target: {fileID: 7668457595092445032, guid: 19aae6ed9661fd646b3d5ec29e5210eb, type: 3}
+      propertyPath: <OnEpoch>k__BackingField.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 5863892298760168045}
+    - target: {fileID: 7668457595092445032, guid: 19aae6ed9661fd646b3d5ec29e5210eb, type: 3}
+      propertyPath: <OnEpoch>k__BackingField.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: Entity, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7668457595092445032, guid: 19aae6ed9661fd646b3d5ec29e5210eb, type: 3}
+      propertyPath: <OnEpoch>k__BackingField.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: Entity, Assembly-CSharp
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 19aae6ed9661fd646b3d5ec29e5210eb, type: 3}
 --- !u!114 &5863892298760168045 stripped
@@ -133,14 +157,6 @@ PrefabInstance:
       propertyPath: glass
       value: 
       objectReference: {fileID: 5863892298760168045}
-    - target: {fileID: -4358595782127956074, guid: 6a3a08c7343fad140ba28493f8aef140, type: 3}
-      propertyPath: viewSelection
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2108639471777408602, guid: 6a3a08c7343fad140ba28493f8aef140, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5201844552464767431, guid: 6a3a08c7343fad140ba28493f8aef140, type: 3}
       propertyPath: m_Name
       value: Teacup
@@ -187,10 +203,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8180473717734722265, guid: 6a3a08c7343fad140ba28493f8aef140, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8266756195372956117, guid: 6a3a08c7343fad140ba28493f8aef140, type: 3}
-      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
