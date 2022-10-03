@@ -123,6 +123,17 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &30161347 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6797853858757002961, guid: 4d12e0138231e144082b3eb414f45418, type: 3}
+  m_PrefabInstance: {fileID: 5631267131582194051}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c987249422b341145a57fcaa4383475d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &84631294 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1134220894878449596, guid: 9037e282013175846923a81ad811c1f7, type: 3}
@@ -132,6 +143,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fd2a1464eb32c5d49a60f41229a90f51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &413607426 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7271760902074145081, guid: 920c36139b2ddde4dac3b4cfceb597e9, type: 3}
+  m_PrefabInstance: {fileID: 7399945201377158090}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c987249422b341145a57fcaa4383475d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &438989737
@@ -203,6 +225,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5342d8961646253499e5325e53d4bd71, type: 3}
+--- !u!114 &456546212 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7571695225611840505, guid: 9037e282013175846923a81ad811c1f7, type: 3}
+  m_PrefabInstance: {fileID: 8336002412965584914}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c987249422b341145a57fcaa4383475d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -528,6 +561,26 @@ PrefabInstance:
     - target: {fileID: 5856406628212603702, guid: 8634d065a6adbef40bc95011ff9ce7ee, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5856406628212603703, guid: 8634d065a6adbef40bc95011ff9ce7ee, type: 3}
+      propertyPath: tallies.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5856406628212603703, guid: 8634d065a6adbef40bc95011ff9ce7ee, type: 3}
+      propertyPath: tallies.Array.data[0]
+      value: 
+      objectReference: {fileID: 30161347}
+    - target: {fileID: 5856406628212603703, guid: 8634d065a6adbef40bc95011ff9ce7ee, type: 3}
+      propertyPath: tallies.Array.data[1]
+      value: 
+      objectReference: {fileID: 413607426}
+    - target: {fileID: 5856406628212603703, guid: 8634d065a6adbef40bc95011ff9ce7ee, type: 3}
+      propertyPath: tallies.Array.data[2]
+      value: 
+      objectReference: {fileID: 456546212}
+    - target: {fileID: 5856406628212603703, guid: 8634d065a6adbef40bc95011ff9ce7ee, type: 3}
+      propertyPath: tallySprites.Array.size
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8634d065a6adbef40bc95011ff9ce7ee, type: 3}

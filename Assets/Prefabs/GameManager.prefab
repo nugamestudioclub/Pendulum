@@ -52,5 +52,9 @@ MonoBehaviour:
   minuteWin: 9
   hourWin: 8
   tallies: []
-  tallyspite: []
+  tallySprites:
+  - {fileID: 729223493, guid: 87d35ae01de04244b83c9c8418cfdb34, type: 3}
+  - {fileID: -762915700, guid: 87d35ae01de04244b83c9c8418cfdb34, type: 3}
+  - {fileID: 1569130637, guid: 87d35ae01de04244b83c9c8418cfdb34, type: 3}
+  - {fileID: -1502964383, guid: 87d35ae01de04244b83c9c8418cfdb34, type: 3}
   inventory: []
