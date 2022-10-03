@@ -1,30 +1,45 @@
 ﻿using UnityEngine;
 
 public class InspectionTarget : Prop {
-	[SerializeField]
-	private Entity entity;
+	[field: SerializeField]
+	public Entity Entity { get; private set; }
 
 	[SerializeField]
 	private GameObject raycastBlocker;
 
+	[SerializeField]
+	private Collider exitCollider;
+
 	public bool IsInspecting { get; private set; }
 
 	void Awake() {
-		entity.ShowView(false);
+		DoAwake();
+	}
+
+	protected override void DoAwake() {
+		base.DoAwake();
+
+		Entity.ShowView(false);
+		if( exitCollider != null )
+			exitCollider.enabled = false;
 		if( raycastBlocker != null )
 			raycastBlocker.SetActive(false);
 	}
 
 	public void Inspect() {
 		IsInspecting = true;
-		entity.ShowView(true);
+		Entity.ShowView(true);
+		if( exitCollider != null )
+			exitCollider.enabled = true;
 		if( raycastBlocker != null )
 			raycastBlocker.SetActive(true);
 	}
 
 	public void Dismiss() {
 		IsInspecting = false;
-		entity.ShowView(false);
+		Entity.ShowView(false);
+		if( exitCollider != null )
+			exitCollider.enabled = false;
 		if( raycastBlocker != null )
 			raycastBlocker.SetActive(false);
 	}
