@@ -10,9 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 65590899c23805949a745ce450a7b312, type: 3}
-  m_Name: PillowEntity
+  m_Name: Photo
   m_EditorClassIdentifier: 
   views:
-  - {fileID: 7926266372285543590, guid: 0b945684c72702d489071e1c190ffb6b, type: 3}
-  - {fileID: 1815299282219449014, guid: 549412126c786024ab97b38b51c05e6b, type: 3}
-  - {fileID: 6416637702488056285, guid: a6e3015ccaaa87b48b918bf83033e350, type: 3}
+  - {fileID: 2622684369528681650, guid: 34b03e9fc2b5f5b498fc47584a10d421, type: 3}

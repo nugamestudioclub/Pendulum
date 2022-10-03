@@ -32,11 +32,11 @@ public class Pillow : ToggleProp
         }
         else if (stateNum == 0)
         {
-            entity.ViewSelection = 1;
+            entity.ViewSelection = 0;
             PlaySound(fluffSound);
         } else
         {
-            entity.ViewSelection = 0;
+            entity.ViewSelection = 1;
             PlaySound(fluffSound);
         }
         
