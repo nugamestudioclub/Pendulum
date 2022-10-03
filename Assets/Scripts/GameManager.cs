@@ -14,7 +14,7 @@ public class GameManager : MonoBehaviour {
 	private readonly List<Entity> entities = new();
 
 	private float timeElapsed;
-	public static float TimeElapsed  => instance.timeElapsed;
+	public static float TimeElapsed => instance.timeElapsed;
 
 	private float tickTime;
 
@@ -62,15 +62,14 @@ public class GameManager : MonoBehaviour {
 	[SerializeField]
 	private List<string> inventory = new();
 	void Awake() {
-		if( instance == null ) {
-			instance = this;
-			DontDestroyOnLoad(gameObject);
-		}
-		else {
-			Destroy(gameObject);
-		}
+		if( instance != null )
+			Destroy(instance);
+
+		instance = this;
+		DontDestroyOnLoad(gameObject);
+
 		password = GetPassword(passwordLength);
-		
+
 		audioSource =  gameObject.GetComponent<AudioSource>();
 		if( audioSource == null )
 			audioSource = gameObject.AddComponent<AudioSource>();
