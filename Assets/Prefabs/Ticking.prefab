@@ -46,7 +46,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tickClip: {fileID: 8300000, guid: cf26967b6c9dae745912c4f5b761a280, type: 3}
-  resetClip: {fileID: 8300000, guid: 7063ecce9bc422443b2c159435601888, type: 3}
+  resetClip: {fileID: 8300000, guid: ff3d2a25d1461ea4994a96323aa309c9, type: 3}
+  hourHand: {fileID: 0}
+  minuteHand: {fileID: 0}
+  hourHandInspect: {fileID: 0}
+  minuteHandInspect: {fileID: 0}
 --- !u!82 &1765065514414207250
 AudioSource:
   m_ObjectHideFlags: 0
