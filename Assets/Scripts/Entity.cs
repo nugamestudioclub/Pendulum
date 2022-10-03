@@ -45,6 +45,8 @@ public class Entity : MonoBehaviour {
 
 	public void ShowView(bool value) {
 		views[viewSelection].SetActive(value);
+		if( value )
+			ViewSelection = viewSelection;
 	}
 
 	public void EnableCollider(bool value) {

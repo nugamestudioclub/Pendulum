@@ -9,13 +9,25 @@ public class Keypad : MonoBehaviour {
 	private Entity chest;
 
 	[SerializeField]
-	GameObject[] buttons;
+	private GameObject[] buttons;
 
 	[SerializeField]
-	InspectionTarget inspectionTarget;
+	private InspectionTarget inspectionTarget;
+
+	[SerializeField]
+	private AudioClip lockSound;
+
+	[SerializeField]
+	private AudioClip openSound;
+
+	private AudioSource audioSource;
 
 	private void Awake() {
 		Randomize();
+
+		audioSource =  gameObject.GetComponent<AudioSource>();
+		if( audioSource == null )
+			audioSource = gameObject.AddComponent<AudioSource>();
 	}
 
 	public void Press(char c) {
@@ -24,15 +36,22 @@ public class Keypad : MonoBehaviour {
 
 		guess += c;
 
-		if( guess == GameManager.Password )
+		if( guess == GameManager.Password ) {
+			inspectionTarget.PlaySound(openSound);
 			Open();
-		else if( guess.Length == GameManager.Password.Length )
+		}
+		else if( guess.Length == GameManager.Password.Length ) {
+			inspectionTarget.PlaySound(lockSound);
 			Cancel();
+		}
 	}
 
 	private void Open() {
 		inspectionTarget.Dismiss();
+		inspectionTarget.Entity.ViewNext();
+		inspectionTarget.Dismiss();
 		chest.ViewSelection = 1;
+
 	}
 
 	private void Close() {
@@ -55,5 +74,9 @@ public class Keypad : MonoBehaviour {
 		GameManager.Random.Shuffle(positions);
 		for( int i = 0; i < buttons.Length; ++i )
 			buttons[i].transform.position = positions[i];
+	}
+
+	protected void PlaySound(AudioClip audioClip) {
+		audioSource.PlayOneShot(audioClip);
 	}
 }
