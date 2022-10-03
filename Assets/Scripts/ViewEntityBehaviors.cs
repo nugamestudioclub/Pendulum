@@ -3,6 +3,15 @@ using Utils;
 
 [CreateAssetMenu(fileName = nameof(ViewEntityBehaviors), menuName = Assets.TEMPLATES + "/" + nameof(ViewEntityBehaviors))]
 public class ViewEntityBehaviors : ScriptableObject {
+
+	public void EnableCollider(Entity entity) {
+		entity.EnableCollider(true);
+	}
+
+	public void DisableCollider(Entity entity) {
+		entity.EnableCollider(false);
+	}
+
 	public void HideView(Entity entity) {
 		entity.ShowView(false);
 	}

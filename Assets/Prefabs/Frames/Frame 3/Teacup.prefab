@@ -137,6 +137,7 @@ MonoBehaviour:
   - {fileID: 2108639471777408602}
   - {fileID: 8266756195372956117}
   viewSelection: 0
+  myCollider: {fileID: 0}
   <OnTick>k__BackingField:
     m_PersistentCalls:
       m_Calls: []
@@ -180,8 +181,8 @@ MonoBehaviour:
   state: 0
   entity: {fileID: -4358595782127956074}
   glass: {fileID: 0}
-  spillSound: {fileID: 0}
-  glassSound: {fileID: 0}
+  spillSound: {fileID: 8300000, guid: 6eceaca46aed9cb45a8e8c739fc7b18a, type: 3}
+  glassSound: {fileID: 8300000, guid: 94bfcceeaa19c1c4186970f3cf0559e8, type: 3}
 --- !u!135 &6847870463811138299
 SphereCollider:
   m_ObjectHideFlags: 0

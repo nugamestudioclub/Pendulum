@@ -104,6 +104,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: Glass_Shard
       objectReference: {fileID: 0}
+    - target: {fileID: 7668457595092445032, guid: 19aae6ed9661fd646b3d5ec29e5210eb, type: 3}
+      propertyPath: <OnEpoch>k__BackingField.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7668457595092445032, guid: 19aae6ed9661fd646b3d5ec29e5210eb, type: 3}
+      propertyPath: <OnEpoch>k__BackingField.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7668457595092445032, guid: 19aae6ed9661fd646b3d5ec29e5210eb, type: 3}
+      propertyPath: <OnEpoch>k__BackingField.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 5863892298760168045}
+    - target: {fileID: 7668457595092445032, guid: 19aae6ed9661fd646b3d5ec29e5210eb, type: 3}
+      propertyPath: <OnEpoch>k__BackingField.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 5863892298760168045}
+    - target: {fileID: 7668457595092445032, guid: 19aae6ed9661fd646b3d5ec29e5210eb, type: 3}
+      propertyPath: <OnEpoch>k__BackingField.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: Entity, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7668457595092445032, guid: 19aae6ed9661fd646b3d5ec29e5210eb, type: 3}
+      propertyPath: <OnEpoch>k__BackingField.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: Entity, Assembly-CSharp
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 19aae6ed9661fd646b3d5ec29e5210eb, type: 3}
 --- !u!114 &5863892298760168045 stripped

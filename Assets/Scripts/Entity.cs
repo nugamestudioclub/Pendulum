@@ -24,6 +24,10 @@ public class Entity : MonoBehaviour {
 	[SerializeField]
 	private int viewSelection;
 
+
+	[SerializeField]
+	private Collider myCollider;
+
 	public int ViewSelection {
 		get => viewSelection;
 		set {
@@ -41,6 +45,11 @@ public class Entity : MonoBehaviour {
 
 	public void ShowView(bool value) {
 		views[viewSelection].SetActive(value);
+	}
+
+	public void EnableCollider(bool value) {
+		if( myCollider != null )
+			myCollider.enabled = value;
 	}
 
 	public int ViewCount => views.Length;

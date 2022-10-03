@@ -24,18 +24,15 @@ public class Teacup : ToggleProp
         //enter state 1
         else if (stateNum == 1)//click first time -> knock over
         {
-            sound = spillSound;
+            PlaySound(spillSound);
             entity.ViewNext();
         }
         //enter state 2
         else if (stateNum == 2)     //second time -> glass falls out
         {
-            sound = glassSound;
+            PlaySound(glassSound);
+            glass.EnableCollider(true);
             glass.ShowView(true);
-        }
-        else
-        {
-            sound = null;
         }
     }
 
