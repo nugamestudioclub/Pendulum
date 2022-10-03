@@ -178,6 +178,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2074434067572099484}
   - component: {fileID: 1415295419330336858}
+  - component: {fileID: 671140055795302193}
   m_Layer: 0
   m_Name: Chest
   m_TagString: Untagged
@@ -234,3 +235,16 @@ MonoBehaviour:
   <OnUnfreeze>k__BackingField:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &671140055795302193
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6020575381851345794}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f47d1f43437ea7746a13c1910708d549, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}

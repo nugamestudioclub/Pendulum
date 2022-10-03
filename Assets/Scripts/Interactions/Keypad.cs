@@ -11,6 +11,9 @@ public class Keypad : MonoBehaviour {
 	[SerializeField]
 	GameObject[] buttons;
 
+	[SerializeField]
+	InspectionTarget inspectionTarget;
+
 	private void Awake() {
 		Randomize();
 	}
@@ -28,7 +31,7 @@ public class Keypad : MonoBehaviour {
 	}
 
 	private void Open() {
-		Debug.Log(nameof(Open));
+		inspectionTarget.Dismiss();
 		chest.ViewSelection = 1;
 	}
 

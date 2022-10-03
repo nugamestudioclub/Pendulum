@@ -39,6 +39,10 @@ public class Entity : MonoBehaviour {
 		}
 	}
 
+	public void ShowView(bool value) {
+		views[viewSelection].SetActive(value);
+	}
+
 	public int ViewCount => views.Length;
 
 	// This may fire randomly every ten seconds
