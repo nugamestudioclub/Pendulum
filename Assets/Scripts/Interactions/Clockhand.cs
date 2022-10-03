@@ -6,6 +6,8 @@ public class Clockhand : ToggleProp
 {
     public int Ticks => 12;
 
+    public int NumberPointing => state == 0 ? 12 : state + 1;
+
     [SerializeField]
     private int length;
     public int Length => length;

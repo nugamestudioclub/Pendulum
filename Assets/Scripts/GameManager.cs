@@ -41,6 +41,18 @@ public class GameManager : MonoBehaviour {
 	public static string Password => instance.password;
 
 	[SerializeField]
+	private int secondWin = 7;
+	public static int SecondWin => instance.secondWin;
+	[SerializeField]
+	private int minuteWin = 11;
+	public static int MinuteWin => instance.minuteWin;
+	[SerializeField]
+	private int hourWin = 8;
+	public static int HourWin => instance.hourWin;
+
+	public static string WinCombo => $"Win Combo :(s: {SecondWin}, m: {MinuteWin}, h: {HourWin}";
+
+	[SerializeField]
 	private List<string> inventory = new();
 	void Awake() {
 		if( instance == null ) {
@@ -53,6 +65,7 @@ public class GameManager : MonoBehaviour {
 		password = GetPassword(passwordLength);
 
 		Debug.Log(password);
+		Debug.Log(WinCombo);
 	}
 
 	void Start() {
