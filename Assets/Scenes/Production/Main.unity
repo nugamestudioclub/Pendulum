@@ -643,40 +643,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c47b4c389b3649d46ae780e9f3321e70, type: 3}
---- !u!1 &1823553484 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8336002411893213413, guid: 9037e282013175846923a81ad811c1f7, type: 3}
-  m_PrefabInstance: {fileID: 8336002412965584914}
-  m_PrefabAsset: {fileID: 0}
---- !u!65 &1823553487
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1823553484}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 21.713362, y: 21.319084, z: 0.2}
-  m_Center: {x: 0.07917616, y: -0.226343, z: 0}
---- !u!114 &1823553488
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1823553484}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1babf4f78e5d3049a5930105ae53322, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sound: {fileID: 0}
-  state: 0
-  maxTime: 1
-  distanceFromCamera: 1
 --- !u!1001 &1765065513784554410
 PrefabInstance:
   m_ObjectHideFlags: 0
