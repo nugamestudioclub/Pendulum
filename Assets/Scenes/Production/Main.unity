@@ -123,6 +123,17 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &84631294 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1134220894878449596, guid: 9037e282013175846923a81ad811c1f7, type: 3}
+  m_PrefabInstance: {fileID: 8336002412965584914}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd2a1464eb32c5d49a60f41229a90f51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &438989737
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -581,11 +592,33 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f844fd3d57513474db62fc67dff6b336, type: 3}
+--- !u!114 &1189629369 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6911955495690798055, guid: 9037e282013175846923a81ad811c1f7, type: 3}
+  m_PrefabInstance: {fileID: 8336002412965584914}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd2a1464eb32c5d49a60f41229a90f51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1334411957 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2366784461127067329, guid: f844fd3d57513474db62fc67dff6b336, type: 3}
   m_PrefabInstance: {fileID: 1004148559}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1456127772 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3700013947263967790, guid: 9037e282013175846923a81ad811c1f7, type: 3}
+  m_PrefabInstance: {fileID: 8336002412965584914}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd2a1464eb32c5d49a60f41229a90f51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1552695160
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -643,6 +676,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c47b4c389b3649d46ae780e9f3321e70, type: 3}
+--- !u!114 &2004784148 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6654342557368704674, guid: 9037e282013175846923a81ad811c1f7, type: 3}
+  m_PrefabInstance: {fileID: 8336002412965584914}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd2a1464eb32c5d49a60f41229a90f51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1765065513784554410
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -694,6 +738,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1765065514414207251, guid: 359e688f462397d43a45b8420a94def7, type: 3}
+      propertyPath: hourHand
+      value: 
+      objectReference: {fileID: 1189629369}
+    - target: {fileID: 1765065514414207251, guid: 359e688f462397d43a45b8420a94def7, type: 3}
+      propertyPath: minuteHand
+      value: 
+      objectReference: {fileID: 1456127772}
+    - target: {fileID: 1765065514414207251, guid: 359e688f462397d43a45b8420a94def7, type: 3}
+      propertyPath: hourHandInspect
+      value: 
+      objectReference: {fileID: 84631294}
+    - target: {fileID: 1765065514414207251, guid: 359e688f462397d43a45b8420a94def7, type: 3}
+      propertyPath: minuteHandInspect
+      value: 
+      objectReference: {fileID: 2004784148}
     - target: {fileID: 1765065514414207261, guid: 359e688f462397d43a45b8420a94def7, type: 3}
       propertyPath: m_Name
       value: Ticking
