@@ -3,6 +3,14 @@ using Utils;
 
 [CreateAssetMenu(fileName = nameof(ViewEntityBehaviors), menuName = Assets.TEMPLATES + "/" + nameof(ViewEntityBehaviors))]
 public class ViewEntityBehaviors : ScriptableObject {
+	public void HideView(Entity entity) {
+		entity.ShowView(false);
+	}
+
+	public void ShowView(Entity entity) {
+		entity.ShowView(true);
+	}
+
 	public void ViewNext(Entity entity) {
 		entity.ViewNext();
 	}
