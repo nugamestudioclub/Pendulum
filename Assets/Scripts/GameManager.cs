@@ -37,6 +37,8 @@ public class GameManager : MonoBehaviour {
 	private string password;
 	public static string Password => instance.password;
 
+	[SerializeField]
+	private List<string> inventory = new();
 	void Awake() {
 		if( instance == null ) {
 			instance = this;
@@ -48,6 +50,12 @@ public class GameManager : MonoBehaviour {
 		password = GetPassword(passwordLength);
 
 		Debug.Log(password);
+	}
+
+	void Start() {
+		// Begin epoch 0
+		foreach( var entity in GetEntities() )
+			entity.OnEpoch.Invoke(entity);
 	}
 
 	private void Update() {
@@ -104,11 +112,24 @@ public class GameManager : MonoBehaviour {
 
 	private void AdvanceEpoch() {
 		++epoch;
+		inventory.Clear();
 		foreach( var entity in GetEntities() )
 			entity.OnEpoch.Invoke(entity);
 	}
 
 	private static IEnumerable<Entity> GetEntities() {
 		return instance.entities.Where(e => e != null && e.enabled);
+	}
+
+	public static void AddItem(string item) {
+		instance.inventory.Add(item);
+	}
+
+	public static void RemoveItem(string item) {
+		instance.inventory.Remove(item);
+	}
+
+	public static bool HasItem(string item) {
+		return instance.inventory.Contains(item);
 	}
 }
