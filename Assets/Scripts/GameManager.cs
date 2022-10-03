@@ -50,12 +50,11 @@ public class GameManager : MonoBehaviour {
 	private int hourWin = 8;
 	public static int HourWin => instance.hourWin;
 
-	public static string WinCombo => $"Win Combo :(s: {SecondWin}, m: {MinuteWin}, h: {HourWin}";
+	[SerializeField]
+	public Tally[] tallies;
 
 	[SerializeField]
-	public GameObject[] tallies;
-	[SerializeField]
-	public Sprite[] tallyspite;
+	public Sprite[] tallySprites;
 
 	[SerializeField]
 	private List<string> inventory = new();
@@ -69,14 +68,17 @@ public class GameManager : MonoBehaviour {
 		}
 		password = GetPassword(passwordLength);
 
-		Debug.Log(password);
-		Debug.Log(WinCombo);
+		Debug.Log("Keypad Password: " + password);
+		Debug.Log($"Win Combo: (s: {SecondWin}, m: {MinuteWin}, h: {HourWin}");
 	}
 
 	void Start() {
 		// Begin epoch 0
 		foreach( var entity in GetEntities() )
 			entity.OnEpoch.Invoke(entity);
+
+		foreach( var tally in tallies )
+			tally.Sprite = tallySprites[Password.IndexOf((char)('0' + tally.Id))];
 	}
 
 	private void Update() {
