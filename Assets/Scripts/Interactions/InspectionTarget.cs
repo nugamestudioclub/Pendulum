@@ -27,6 +27,7 @@ public class InspectionTarget : Prop {
 	}
 
 	public void Inspect() {
+		GameManager.Freeze();
 		IsInspecting = true;
 		Entity.ShowView(true);
 		if( exitCollider != null )
@@ -36,6 +37,7 @@ public class InspectionTarget : Prop {
 	}
 
 	public void Dismiss() {
+		GameManager.Unfreeze();
 		IsInspecting = false;
 		Entity.ShowView(false);
 		if( exitCollider != null )

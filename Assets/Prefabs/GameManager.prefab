@@ -48,4 +48,9 @@ MonoBehaviour:
   tickLength: 10
   epochLength: 120
   passwordLength: 4
+  secondWin: 7
+  minuteWin: 9
+  hourWin: 8
+  tallies: []
+  tallyspite: []
   inventory: []
