@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 65590899c23805949a745ce450a7b312, type: 3}
-  m_Name: InteractionEntity
+  m_Name: ChestContents
   m_EditorClassIdentifier: 
   views:
-  - {fileID: 3459971305294545789, guid: dfb0ad71912d7ca48afa6b4c1cc29077, type: 3}
-  - {fileID: 2674934346428634808, guid: 9b9619dabf6a4f7438ac3bf19ae91798, type: 3}
+  - {fileID: 4484927375010714843, guid: b33a86ab65afd9a49bc6bb9c8f0adb7d, type: 3}
+  - {fileID: 8712703478907309725, guid: 5fecd13e7d87b6c48b71daf02a56e056, type: 3}

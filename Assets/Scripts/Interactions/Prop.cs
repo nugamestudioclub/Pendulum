@@ -7,9 +7,14 @@ public abstract class Prop : MonoBehaviour {
 	private AudioSource audioSource;
 
 	void Awake() {
+		DoAwake();
+	}
+
+	protected virtual void DoAwake() {
 		audioSource =  gameObject.GetComponent<AudioSource>();
 		if( audioSource == null )
 			audioSource = gameObject.AddComponent<AudioSource>();
+
 	}
 
 	private void OnMouseDown() {
@@ -22,7 +27,7 @@ public abstract class Prop : MonoBehaviour {
 
 	protected abstract void Activate();
 
-	protected void PlaySound(AudioClip audioClip) {
+	public void PlaySound(AudioClip audioClip) {
 		audioSource.PlayOneShot(audioClip);
 	}
 }
