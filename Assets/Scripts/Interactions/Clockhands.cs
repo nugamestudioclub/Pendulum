@@ -13,13 +13,18 @@ public class Clockhands : MonoBehaviour {
 	[SerializeField]
 	private AudioClip exitSound;
 
+	private bool playedSound;
 
 	private void Update() {
 		if( secondHand.NumberPointing == GameManager.SecondWin &&
 			minuteHand.NumberPointing == GameManager.MinuteWin &&
 			hourHand.NumberPointing == GameManager.HourWin ) {
-			if( exitSound != null )
+
+			if( exitSound != null && !playedSound ) {
 				GameManager.PlayOneShot(exitSound);
+				playedSound = true;
+			}
+
 			StartCoroutine(Win.ExitToCredits());
 		}
 	}
