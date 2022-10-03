@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -34,5 +35,10 @@ public class Clockhand : ToggleProp
         {
             Toggle();
         }
+    }
+
+    public void Tick()
+    {
+        Toggle();
     }
 }
