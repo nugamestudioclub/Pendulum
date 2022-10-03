@@ -53,6 +53,11 @@ public class GameManager : MonoBehaviour {
 	public static string WinCombo => $"Win Combo :(s: {SecondWin}, m: {MinuteWin}, h: {HourWin}";
 
 	[SerializeField]
+	public GameObject[] tallies;
+	[SerializeField]
+	public Sprite[] tallyspite;
+
+	[SerializeField]
 	private List<string> inventory = new();
 	void Awake() {
 		if( instance == null ) {
