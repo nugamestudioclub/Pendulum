@@ -44,5 +44,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06abf29ec30fef44cb3356b908edefbc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isTimeFrozen: 0
   tickLength: 10
-  epochLength: 60
+  epochLength: 120
+  passwordLength: 4
+  inventory: []

@@ -22,4 +22,9 @@ public class ViewEntityBehaviors : ScriptableObject {
 	public void ViewByEpoch(Entity entity) {
 		entity.ViewByEpoch();
 	}
+
+	public void ResetView(Entity entity)
+    {
+		entity.ViewSelection = 0;
+    }
 }
